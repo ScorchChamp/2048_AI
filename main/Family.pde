@@ -2,7 +2,7 @@
 
 
 class Family {
-  float mutation_chance = 0.001;
+  float mutation_chance = 0.1;
   int poolSize = 0;
   int amount_dead = 0;
   int generation = 0;

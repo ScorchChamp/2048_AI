@@ -32,8 +32,8 @@ class Network {
         float y_per_cyl_HL = (height/(hidden_layer_size+1));
         float cil_y_HL = y_per_cyl_HL*b + y_per_cyl_HL;
         circle(HL_x, cil_y_HL, cyl_size);
-        if (layers[1][b].weights[a] > 0) stroke(0,255,0);
-        else stroke(255,0,0);
+        if (layers[1][b].weights[a] > 0) stroke(0,255,0, map(abs(layers[1][b].weights[a]),0,1,0,255));
+        else stroke(255,0,0, map(abs(layers[1][b].weights[a]),0,1,0,255));
         strokeWeight(abs(layers[1][b].weights[a]));
         line(base_x, cil_y, HL_x, cil_y_HL);
         for (int c = 0; c < output_size; c++) {
@@ -42,8 +42,8 @@ class Network {
           float y_per_cyl_OUTPUT = (height/(output_size+1));
           float cil_y_OUTPUT = y_per_cyl_OUTPUT*c + y_per_cyl_OUTPUT;
           circle(OUTPUT_x, cil_y_OUTPUT, cyl_size);
-          if (layers[2][c].weights[b] > 0) stroke(0,255,0);
-          else stroke(255,0,0);
+          if (layers[2][c].weights[b] > 0) stroke(0,255,0, map(abs(layers[2][c].weights[b]),0,1,0,255));
+          else stroke(255,0,0, map(abs(layers[2][c].weights[b]),0,1,0,255));
           strokeWeight(abs(layers[2][c].weights[b]));
           line(HL_x, cil_y_HL, OUTPUT_x, cil_y_OUTPUT);
         }

@@ -88,7 +88,7 @@ class SlotManager {
   
   
   boolean endMove() {
-    if (ticks_since_last_succesful_move > 10) return true;
+    if (ticks_since_last_succesful_move > 3) return true;
     if (didSomethingChange()) {
       ticks_since_last_succesful_move = 0;
       return !this.addRandomSlot();

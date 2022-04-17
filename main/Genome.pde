@@ -15,7 +15,7 @@ class Client {
     this.GM = new GameManager(seed);
     this.chromosome = chromosome;
     layer_structure[0] = this.GM.SM.slots.length * this.GM.SM.slots[0].length;
-    layer_structure[1] = 20;
+    layer_structure[1] = 10;
     layer_structure[2] = 4;
     this.AI = new Network(GM.SM.slots.length*this.GM.SM.slots[0].length, layer_structure[1], layer_structure[2], this.chromosome);
   }
@@ -24,7 +24,7 @@ class Client {
     this.generation = generation;
     this.GM = new GameManager(seed);
     layer_structure[0] = this.GM.SM.slots.length * this.GM.SM.slots[0].length;
-    layer_structure[1] = 20;
+    layer_structure[1] = 10;
     layer_structure[2] = 4;
     generateChromosome();
     this.AI = new Network(GM.SM.slots.length*this.GM.SM.slots[0].length, layer_structure[1], layer_structure[2], this.chromosome);
