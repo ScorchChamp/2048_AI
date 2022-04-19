@@ -36,8 +36,8 @@ class Client {
 
   void draw() {
     rect(0,0,width/2,height);
-    this.GM.draw();
     this.AI.draw(generation);
+    this.GM.draw();
   }
 
   void playGame() {

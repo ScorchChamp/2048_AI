@@ -5,15 +5,15 @@ int pool_size = 1000;
 Family family;
 int seed = 0;
 int high_score = 0;
+int drawing = 0;
 
 public void setup() {
-  frameRate(165);
+  frameRate(144);
   size(1000, 500);
   family = new Family(pool_size);
 }
 
 void draw() {
-  int drawing = 0;
   int amount_dead = 0;
   for (int i = 0 ; i < family.people.length; i++) {
     Client c = family.people[i];
@@ -21,7 +21,7 @@ void draw() {
     if (c.getFitness() > high_score) {
       high_score = c.getFitness();
       drawing = i;
-      frameRate(60000/high_score);
+      //frameRate(60000/high_score);
     }
     if (c.dead) {
       amount_dead++;
@@ -30,6 +30,7 @@ void draw() {
       c.draw();
     }
   }
+  text(drawing, 30, 30);
   if (amount_dead == family.people.length) {
     family.haveChildren();
     high_score = 0;

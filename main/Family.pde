@@ -2,7 +2,7 @@
 
 
 class Family {
-  float mutation_chance = 0.1;
+  float mutation_chance = 0.01;
   int poolSize = 0;
   int amount_dead = 0;
   int generation = 0;
@@ -33,7 +33,7 @@ class Family {
   void haveChildren() {
     generation++;
     Client[] sorted = getTopFitness();
-    Client[] best_genomes = (Client[]) subset(sorted, floor(sorted.length/2));
+    Client[] best_genomes = (Client[]) subset(sorted, 9* floor(sorted.length/10), floor(sorted.length/10));
     
     for (int i = 0; i < poolSize; i++) {
       float[] chrom1 = best_genomes[floor(random(0, best_genomes.length))].chromosome;

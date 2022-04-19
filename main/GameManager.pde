@@ -21,7 +21,7 @@ class GameManager {
         all_values = (int[]) append(all_values, s.value);
       }
     }
-    return fitness + (max(all_values)*3);
+    return fitness + (max(all_values));
   }
   
   void draw() {
