@@ -17,7 +17,7 @@
   <h3 align="center">2048_AI</h3>
 
   <p align="center">
-    Twitch Clip Bot
+    2048 AI
     <br />
     <a href="https://github.com/ScorchChamp/2048_AI/releases/">Releases »</a>
     <br />
